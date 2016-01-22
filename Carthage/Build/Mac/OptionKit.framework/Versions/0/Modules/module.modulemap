@@ -1,3 +1,0 @@
-framework module OptionKit {
-    header "OptionKit-Swift.h"
-}
