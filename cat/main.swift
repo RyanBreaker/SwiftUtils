@@ -11,7 +11,7 @@ import OptionKit
 
 let opt_b = Option(trigger: .Short("b"), helpDescription: "Number the non-blank output lines, starting at 1.")
 let opt_n = Option(trigger: .Short("n"), helpDescription: "Number the output lines, starting at 1.")
-let optionParser = OptionParser(definitions: [opt_b])
+let optionParser = OptionParser(definitions: [opt_b, opt_n])
 
 var numberLines = false
 var numberAllLines = false
@@ -33,7 +33,7 @@ for (opt, _) in options {
 	case opt_n:
 		numberAllLines = true
 		break
-		
+	
 	default:
 		if opt.trigger.debugDescription == "[-h|--help]" {
 			print(optionParser.helpStringForCommandName("cat"))
@@ -54,7 +54,7 @@ for arg in rest {
 		if fManager.isReadableFileAtPath(arg) {
 			let s = try! String(contentsOfFile: arg, encoding: NSUTF8StringEncoding)
 			if numberAllLines {
-				outString += "\(lineNumber): " + s
+				outString += "     \(lineNumber++)\t" + s
 			} else {
 				outString += s
 			}
@@ -62,10 +62,10 @@ for arg in rest {
 			print("Permission denied, cannot read file \(arg).")
 		}
 	} else {
-		print("Error: File \(arg) does not exist.")
+		print("Error: File `\(arg)' does not exist.")
 	}
 }
 
 
 // Push out outString
-print(outString)
+print(outString, terminator: "")

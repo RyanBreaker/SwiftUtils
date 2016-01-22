@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DFD233611C4DDAF1001F5E49 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD233601C4DDAF1001F5E49 /* main.swift */; };
+		DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC3E1C51DCDC0065967F /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +24,8 @@
 
 /* Begin PBXFileReference section */
 		DFD2335D1C4DDAF1001F5E49 /* cat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cat; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFD233601C4DDAF1001F5E49 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DFE38ED11C4ECDA700B3D0DE /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
+		DFE8FC3E1C51DCDC0065967F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,8 +42,8 @@
 		DFD233541C4DDAF0001F5E49 = {
 			isa = PBXGroup;
 			children = (
+				DFE8FC3D1C51DCDC0065967F /* cat */,
 				DFE38ED11C4ECDA700B3D0DE /* Option.swift */,
-				DFD2335F1C4DDAF1001F5E49 /* cat */,
 				DFD2335E1C4DDAF1001F5E49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,13 +56,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		DFD2335F1C4DDAF1001F5E49 /* cat */ = {
+		DFE8FC3D1C51DCDC0065967F /* cat */ = {
 			isa = PBXGroup;
 			children = (
-				DFD233601C4DDAF1001F5E49 /* main.swift */,
+				DFE8FC3E1C51DCDC0065967F /* main.swift */,
 			);
-			name = cat;
-			path = SwiftUtils;
+			path = cat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFD233611C4DDAF1001F5E49 /* main.swift in Sources */,
+				DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +150,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -165,6 +165,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
+				LIBRARY_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -195,6 +197,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -203,6 +206,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
+				LIBRARY_SEARCH_PATHS = $SRCROOT/Carthage/Build/Mac/;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
