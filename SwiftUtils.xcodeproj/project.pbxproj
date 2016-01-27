@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFBC97B71C587F8300A60C6A /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
+		DFBC97B81C587F8400A60C6A /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
 		DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC3E1C51DCDC0065967F /* main.swift */; };
 		DFE8FC481C51EFE20065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC471C51EFE20065967F /* main.swift */; };
 /* End PBXBuildFile section */
@@ -33,8 +35,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DFBC97B61C58622200A60C6A /* FileAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAttributes.swift; sourceTree = "<group>"; };
+		DFBC97BA1C5882CA00A60C6A /* .swiftlint.yml */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 		DFD2335D1C4DDAF1001F5E49 /* cat */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cat; sourceTree = BUILT_PRODUCTS_DIR; };
-		DFE38ED11C4ECDA700B3D0DE /* Option.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Option.swift; sourceTree = "<group>"; };
 		DFE8FC3E1C51DCDC0065967F /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		DFE8FC401C51E5FB0065967F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DFE8FC451C51EFE20065967F /* ls */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ls; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,9 +65,10 @@
 		DFD233541C4DDAF0001F5E49 = {
 			isa = PBXGroup;
 			children = (
+				DFBC97BA1C5882CA00A60C6A /* .swiftlint.yml */,
 				DFE8FC401C51E5FB0065967F /* .gitignore */,
+				DFBC97B61C58622200A60C6A /* FileAttributes.swift */,
 				DFE8FC3D1C51DCDC0065967F /* cat */,
-				DFE38ED11C4ECDA700B3D0DE /* Option.swift */,
 				DFE8FC461C51EFE20065967F /* ls */,
 				DFD2335E1C4DDAF1001F5E49 /* Products */,
 			);
@@ -122,6 +126,7 @@
 				DFE8FC411C51EFE20065967F /* Sources */,
 				DFE8FC421C51EFE20065967F /* Frameworks */,
 				DFE8FC431C51EFE20065967F /* CopyFiles */,
+				DFBC97B91C58815600A60C6A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -168,11 +173,28 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		DFBC97B91C58815600A60C6A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Swiftlint not found!\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DFD233591C4DDAF1001F5E49 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBC97B71C587F8300A60C6A /* FileAttributes.swift in Sources */,
 				DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBC97B81C587F8400A60C6A /* FileAttributes.swift in Sources */,
 				DFE8FC481C51EFE20065967F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,6 +359,7 @@
 				DFE8FC4B1C51EFE20065967F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

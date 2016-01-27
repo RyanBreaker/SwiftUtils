@@ -7,47 +7,15 @@
 //
 
 import Foundation
-import OptionKit
 
 
-
-internal struct FileAttributes {
-	let fileName: String
-	let fileSize: UInt64
-
-	init(_ fileName: String, _ fileAttributes: [String: AnyObject]?) throws {
-		guard let fileAttributesUnwrapped = fileAttributes
-			else {
-				throw FileAttributesError.NilFileAttributes
-		}
-
-		guard let fileSizeAnyObject = fileAttributesUnwrapped["NSFileSize"]
-			else {
-				throw FileAttributesError.DictionaryAccessFailed(key: "NSFileSize")
-		}
-
-		guard let fileSize = fileSizeAnyObject as? UInt64
-			else {
-				throw FileAttributesError.FailedDowncast
-		}
-
-		self.fileName = fileName
-		self.fileSize = fileSize
-	}
-}
-
-enum FileAttributesError: ErrorType {
-	case NilFileAttributes
-	case DictionaryAccessFailed(key: String)
-	case FailedDowncast
-}
-
-
-
+/// File manager
 let fManager = NSFileManager.defaultManager()
 
+///  Current working directory and its contents
 let cwd = fManager.currentDirectoryPath
 let cwdContents: [String]
+
 
 do {
 	cwdContents = try fManager.contentsOfDirectoryAtPath(cwd)
@@ -63,7 +31,4 @@ var outString = ""
 for file in cwdContents {
 }
 
-
 print(outString, terminator: "")
-
-
