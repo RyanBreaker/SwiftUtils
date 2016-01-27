@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DFBC97B71C587F8300A60C6A /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
 		DFBC97B81C587F8400A60C6A /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
 		DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC3E1C51DCDC0065967F /* main.swift */; };
 		DFE8FC481C51EFE20065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC471C51EFE20065967F /* main.swift */; };
+		DFFD81981C59146700621D83 /* FileAttributesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD81971C59146700621D83 /* FileAttributesTest.swift */; };
+		DFFD819D1C59148900621D83 /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,9 @@
 		DFE8FC401C51E5FB0065967F /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DFE8FC451C51EFE20065967F /* ls */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ls; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFE8FC471C51EFE20065967F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		DFFD81951C59146700621D83 /* FileAttributesTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FileAttributesTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFFD81971C59146700621D83 /* FileAttributesTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileAttributesTest.swift; sourceTree = "<group>"; };
+		DFFD81991C59146700621D83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,17 +63,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DFFD81921C59146700621D83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		DFD233541C4DDAF0001F5E49 = {
 			isa = PBXGroup;
 			children = (
-				DFBC97BA1C5882CA00A60C6A /* .swiftlint.yml */,
 				DFE8FC401C51E5FB0065967F /* .gitignore */,
-				DFBC97B61C58622200A60C6A /* FileAttributes.swift */,
-				DFE8FC3D1C51DCDC0065967F /* cat */,
-				DFE8FC461C51EFE20065967F /* ls */,
+				DFBC97BA1C5882CA00A60C6A /* .swiftlint.yml */,
+				DFFD819E1C59151200621D83 /* Source */,
 				DFD2335E1C4DDAF1001F5E49 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,6 +88,7 @@
 			children = (
 				DFD2335D1C4DDAF1001F5E49 /* cat */,
 				DFE8FC451C51EFE20065967F /* ls */,
+				DFFD81951C59146700621D83 /* FileAttributesTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,6 +108,26 @@
 			);
 			path = ls;
 			sourceTree = "<group>";
+		};
+		DFFD81961C59146700621D83 /* FileAttributesTest */ = {
+			isa = PBXGroup;
+			children = (
+				DFFD81971C59146700621D83 /* FileAttributesTest.swift */,
+				DFFD81991C59146700621D83 /* Info.plist */,
+			);
+			path = FileAttributesTest;
+			sourceTree = "<group>";
+		};
+		DFFD819E1C59151200621D83 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DFBC97B61C58622200A60C6A /* FileAttributes.swift */,
+				DFE8FC3D1C51DCDC0065967F /* cat */,
+				DFE8FC461C51EFE20065967F /* ls */,
+				DFFD81961C59146700621D83 /* FileAttributesTest */,
+			);
+			path = Source;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -123,10 +153,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DFE8FC491C51EFE20065967F /* Build configuration list for PBXNativeTarget "ls" */;
 			buildPhases = (
+				DFBC97B91C58815600A60C6A /* ShellScript */,
 				DFE8FC411C51EFE20065967F /* Sources */,
 				DFE8FC421C51EFE20065967F /* Frameworks */,
 				DFE8FC431C51EFE20065967F /* CopyFiles */,
-				DFBC97B91C58815600A60C6A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -136,6 +166,23 @@
 			productName = ls;
 			productReference = DFE8FC451C51EFE20065967F /* ls */;
 			productType = "com.apple.product-type.tool";
+		};
+		DFFD81941C59146700621D83 /* FileAttributesTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFFD819A1C59146700621D83 /* Build configuration list for PBXNativeTarget "FileAttributesTest" */;
+			buildPhases = (
+				DFFD81911C59146700621D83 /* Sources */,
+				DFFD81921C59146700621D83 /* Frameworks */,
+				DFFD81931C59146700621D83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FileAttributesTest;
+			productName = FileAttributesTest;
+			productReference = DFFD81951C59146700621D83 /* FileAttributesTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -153,10 +200,13 @@
 					DFE8FC441C51EFE20065967F = {
 						CreatedOnToolsVersion = 7.2;
 					};
+					DFFD81941C59146700621D83 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 				};
 			};
 			buildConfigurationList = DFD233581C4DDAF0001F5E49 /* Build configuration list for PBXProject "SwiftUtils" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -169,9 +219,20 @@
 			targets = (
 				DFD2335C1C4DDAF1001F5E49 /* cat */,
 				DFE8FC441C51EFE20065967F /* ls */,
+				DFFD81941C59146700621D83 /* FileAttributesTest */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFFD81931C59146700621D83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
 		DFBC97B91C58815600A60C6A /* ShellScript */ = {
@@ -194,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFBC97B71C587F8300A60C6A /* FileAttributes.swift in Sources */,
 				DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +265,15 @@
 			files = (
 				DFBC97B81C587F8400A60C6A /* FileAttributes.swift in Sources */,
 				DFE8FC481C51EFE20065967F /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFFD81911C59146700621D83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFFD819D1C59148900621D83 /* FileAttributes.swift in Sources */,
+				DFFD81981C59146700621D83 /* FileAttributesTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +400,28 @@
 			};
 			name = Release;
 		};
+		DFFD819B1C59146700621D83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileAttributesTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.breaker.FileAttributesTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DFFD819C1C59146700621D83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = FileAttributesTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = rocks.breaker.FileAttributesTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -360,6 +451,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		DFFD819A1C59146700621D83 /* Build configuration list for PBXNativeTarget "FileAttributesTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFFD819B1C59146700621D83 /* Debug */,
+				DFFD819C1C59146700621D83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

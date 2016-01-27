@@ -32,3 +32,4 @@ for file in cwdContents {
 }
 
 print(outString, terminator: "")
+

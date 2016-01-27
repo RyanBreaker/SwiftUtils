@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>FileAttributesTest.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>cat.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,16 @@
 			<true/>
 		</dict>
 		<key>DFE8FC441C51EFE20065967F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFFD81871C589C5900621D83</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFFD81941C59146700621D83</key>
 		<dict>
 			<key>primary</key>
 			<true/>
