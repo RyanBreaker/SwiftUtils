@@ -19,7 +19,7 @@ let cwdContents: [String]
 
 do {
 	cwdContents = try fManager.contentsOfDirectoryAtPath(cwd)
-		.sort( { s1, s2 in return s1 < s2 } )
+		.sort({ s1, s2 in return s1 < s2 })
 } catch let error as NSError {
 	print(error.localizedDescription)
 	exit(1)

@@ -1,5 +1,8 @@
 included:
-  - *.swift
+  - cat
+  - ls
 
 excluded:
   - Carthage
+
+line_length: 110

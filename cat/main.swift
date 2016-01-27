@@ -9,6 +9,7 @@
 import Foundation
 import OptionKit
 
+// swiftlint:disable variable_name
 let opt_b = Option(trigger: .Short("b"), helpDescription: "Number the non-blank output lines, starting at 1.")
 let opt_n = Option(trigger: .Short("n"), helpDescription: "Number the output lines, starting at 1.")
 let optionParser = OptionParser(definitions: [opt_b, opt_n])
@@ -29,11 +30,11 @@ for (opt, _) in options {
 	case opt_b:
 		numberLines = true
 		break
-	
+
 	case opt_n:
 		numberAllLines = true
 		break
-	
+
 	default:
 		if opt.trigger.debugDescription == "[-h|--help]" {
 			print(optionParser.helpStringForCommandName("cat"))
@@ -52,7 +53,10 @@ var outString  = ""
 for arg in rest {
 	if fManager.fileExistsAtPath(arg) {
 		if fManager.isReadableFileAtPath(arg) {
+			// swiftlint:disable force_try
 			let s = try! String(contentsOfFile: arg, encoding: NSUTF8StringEncoding)
+			// swiftlint:enable force_try
+
 			if numberAllLines {
 				outString += "     \(lineNumber++)\t" + s
 			} else {
