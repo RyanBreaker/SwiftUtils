@@ -1,9 +1,7 @@
 included:
-  - .
-  - cat
-  - ls
+  - Source/
 
 excluded:
-  - Carthage
+  - Carthage/
 
 line_length: 110

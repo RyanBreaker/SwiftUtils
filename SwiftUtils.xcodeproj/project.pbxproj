@@ -11,7 +11,7 @@
 		DFE8FC3F1C51DCDC0065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC3E1C51DCDC0065967F /* main.swift */; };
 		DFE8FC481C51EFE20065967F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE8FC471C51EFE20065967F /* main.swift */; };
 		DFFD81981C59146700621D83 /* FileAttributesTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFFD81971C59146700621D83 /* FileAttributesTest.swift */; };
-		DFFD819D1C59148900621D83 /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
+		DFFD819F1C59171800621D83 /* FileAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFBC97B61C58622200A60C6A /* FileAttributes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -272,7 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DFFD819D1C59148900621D83 /* FileAttributes.swift in Sources */,
+				DFFD819F1C59171800621D83 /* FileAttributes.swift in Sources */,
 				DFFD81981C59146700621D83 /* FileAttributesTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,7 +404,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FileAttributesTest/Info.plist;
+				INFOPLIST_FILE = Source/FileAttributesTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.breaker.FileAttributesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -415,7 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = FileAttributesTest/Info.plist;
+				INFOPLIST_FILE = Source/FileAttributesTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = rocks.breaker.FileAttributesTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";

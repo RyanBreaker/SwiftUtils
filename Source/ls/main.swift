@@ -17,6 +17,7 @@ let cwd = fManager.currentDirectoryPath
 let cwdContents: [String]
 
 
+
 do {
 	cwdContents = try fManager.contentsOfDirectoryAtPath(cwd)
 		.sort({ s1, s2 in return s1 < s2 })

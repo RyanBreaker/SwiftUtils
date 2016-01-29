@@ -9,27 +9,22 @@
 import XCTest
 
 class FileAttributesTest: XCTestCase {
-    
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
+	let empty = [String: AnyObject]()
+	let fileSize = [NSFileSize: NSNumber(unsignedLongLong: 1024) as AnyObject]
+
+	func testEmpty() {
+		let fileAttrib = try? FileAttributes(fileName: "Foo", attributes: empty)
+
+		XCTAssertNotNil(fileAttrib)
+	}
+
+	func testFileSize() {
+		let fileAttrib = try? FileAttributes(fileName: "Foo", attributes: fileSize)
+
+		XCTAssertNotNil(fileAttrib)
+		XCTAssertEqual(fileAttrib!.fileSize, UInt64(1024))
+		XCTAssertEqual(fileAttrib!.filePermissions, FileAttributes.EmptyPermissions)
+	}
+
 }
